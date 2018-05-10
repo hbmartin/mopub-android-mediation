@@ -1,4 +1,9 @@
 ## Changelog
+  
+  * 7.8.6.3
+    * Removed reflection from all adapters, as there are cases on MultiDexed applications, where reflection may not be able to find the target class if it's in another dex file. This resolves this issue: https://github.com/mopub/mopub-android-mediation/issues/19#issuecomment-382488061.
+  * 7.8.6.2
+    * Fixed edge case of rewarded videos not loading on custom zones.
   * 7.8.6.1
     * Added support for passing down AppLovin's `sdk_key` via the dashboard.
     * Do not unnecessarily preload a non-zoned rewarded video, as some publishers may only use zone-based rewarded videos.
